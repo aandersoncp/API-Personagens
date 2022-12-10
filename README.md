@@ -1,2 +1,2 @@
 # API-Personagens
-API Rest com Java e Sprong Boot
+API Rest usando JAVA e Spring Boot
