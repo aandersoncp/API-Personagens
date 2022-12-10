@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import br.ce.anderson.apipersonagens.model.Personagem;
+import br.ce.anderson.apipersonagens.model.exception.ResourceNotFoundException;
 
 @Repository
 public class PersonagemRepositoryOld {
@@ -70,6 +71,6 @@ public class PersonagemRepositoryOld {
                 return personagem;
             }
        }
-       return null;
+       throw new ResourceNotFoundException("Personagem não encontrado");
     }
 }

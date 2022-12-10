@@ -28,7 +28,7 @@ public class PersonagemController {
     }
 
     @GetMapping("/{id}")
-    public Personagem obterPorId(@PathVariable int id){
+    public Personagem obterPorId(@PathVariable Integer id){
         return personagemService.obterPorId(id);
     }
 
@@ -38,13 +38,13 @@ public class PersonagemController {
     }
 
     @DeleteMapping("/{id}")
-    public String deletar(@PathVariable int id){
+    public String deletar(@PathVariable Integer id){
         personagemService.deletar(id);
         return "Personagem com id = " + id + " foi deletado com sucesso!";
     }
 
     @PutMapping("/{id}")
-    public Personagem atualizar(@PathVariable int id, @RequestBody Personagem p){
+    public Personagem atualizar(@PathVariable Integer id, @RequestBody Personagem p){
 
         return personagemService.atualizar(id, p);
     }

@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import br.ce.anderson.apipersonagens.model.Personagem;
 import br.ce.anderson.apipersonagens.repository.PersonagemRepositoryOld;
@@ -19,7 +18,7 @@ public class PersonagemService {
         return repositoryOld.obterTodos();
     }
 
-    public Personagem obterPorId(int id){
+    public Personagem obterPorId(Integer id){
         return repositoryOld.obterPorId(id);
     }
 
@@ -27,11 +26,11 @@ public class PersonagemService {
         return repositoryOld.cadastrar(p);
     }
 
-    public void deletar(int id){
+    public void deletar(Integer id){
         repositoryOld.deletar(id);
     }
 
-    public Personagem atualizar(int id, Personagem p){
+    public Personagem atualizar(Integer id, Personagem p){
 
         //Fazer a validação do campo id aqui
         p.setId(id);

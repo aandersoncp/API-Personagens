@@ -1,22 +1,30 @@
 package br.ce.anderson.apipersonagens.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Personagem {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     private String nome;
 
     private String filme_serie;
 
-    private int ano_estreia;
+    private Integer ano_estreia;
 
     private String observacao;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -36,11 +44,11 @@ public class Personagem {
         this.filme_serie = filme_serie;
     }
 
-    public int getAno_estreia() {
+    public Integer getAno_estreia() {
         return ano_estreia;
     }
 
-    public void setAno_estreia(int ano_estreia) {
+    public void setAno_estreia(Integer ano_estreia) {
         this.ano_estreia = ano_estreia;
     }
 
