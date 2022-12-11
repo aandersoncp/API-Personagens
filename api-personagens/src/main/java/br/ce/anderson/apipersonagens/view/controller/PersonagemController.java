@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.ce.anderson.apipersonagens.model.Personagem;
 import br.ce.anderson.apipersonagens.services.PersonagemService;
 import br.ce.anderson.apipersonagens.shared.PersonagemDTO;
 import br.ce.anderson.apipersonagens.view.models.PersonagemRequest;
