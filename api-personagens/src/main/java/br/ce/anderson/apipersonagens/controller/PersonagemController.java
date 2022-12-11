@@ -1,6 +1,7 @@
 package br.ce.anderson.apipersonagens.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -28,7 +29,7 @@ public class PersonagemController {
     }
 
     @GetMapping("/{id}")
-    public Personagem obterPorId(@PathVariable Integer id){
+    public Optional<Personagem> obterPorId(@PathVariable Integer id){
         return personagemService.obterPorId(id);
     }
 
